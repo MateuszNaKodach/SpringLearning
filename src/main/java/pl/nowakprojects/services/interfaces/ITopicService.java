@@ -1,7 +1,6 @@
-package pl.nowakprojects.service;
+package pl.nowakprojects.services.interfaces;
 
-import org.springframework.stereotype.Service;
-import pl.nowakprojects.model.Topic;
+import pl.nowakprojects.models.Topic;
 
 import java.util.List;
 

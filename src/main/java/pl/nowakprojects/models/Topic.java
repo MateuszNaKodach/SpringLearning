@@ -1,4 +1,4 @@
-package pl.nowakprojects.model;
+package pl.nowakprojects.models;
 
 import lombok.*;
 
@@ -11,13 +11,13 @@ import javax.persistence.Id;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class Topic {
 
     @Id
-    private String id;
+    private final String id;
 
-    private String name;
+    private String name = "";
 
-    private String description;
+    private String description = "";
 }

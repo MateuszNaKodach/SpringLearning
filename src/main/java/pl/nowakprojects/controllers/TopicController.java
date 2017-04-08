@@ -1,11 +1,10 @@
-package pl.nowakprojects.controller;
+package pl.nowakprojects.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pl.nowakprojects.model.Topic;
-import pl.nowakprojects.service.ITopicService;
+import pl.nowakprojects.models.Topic;
+import pl.nowakprojects.services.interfaces.ITopicService;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**

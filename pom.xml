@@ -42,6 +42,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
+
 		<!---<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-oauth2</artifactId>
@@ -56,11 +57,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!---<dependency>
+		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
