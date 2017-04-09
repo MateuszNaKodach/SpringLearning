@@ -1,6 +1,6 @@
-package pl.nowakprojects.services.interfaces;
+package pl.nowakprojects.services;
 
-import pl.nowakprojects.models.Topic;
+import pl.nowakprojects.model.Topic;
 
 import java.util.List;
 

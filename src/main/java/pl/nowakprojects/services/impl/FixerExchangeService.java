@@ -1,13 +1,11 @@
-package pl.nowakprojects.services.implementation;
+package pl.nowakprojects.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import pl.nowakprojects.restclients.FixerExchangeClient;
-import pl.nowakprojects.restclients.dto.ExchangeDTO;
-import pl.nowakprojects.services.interfaces.IExchangeService;
+import pl.nowakprojects.services.restclients.FixerExchangeClient;
+import pl.nowakprojects.services.restclients.dto.ExchangeDTO;
+import pl.nowakprojects.services.IExchangeService;
 
 import java.util.List;
 
@@ -22,13 +20,13 @@ public class FixerExchangeService implements IExchangeService{
     FixerExchangeClient fixerExchangeClient;
 
     @Override
-    public ResponseEntity<ExchangeDTO> getLatestExchange() {
+    public ExchangeDTO getLatestExchange() {
         return fixerExchangeClient.getLatestRates();
     }
 
     @Override
-    public ResponseEntity<ExchangeDTO> getWhatATerribleFailure() {
-        return new ResponseEntity<>(ExchangeDTO.empty(), HttpStatus.I_AM_A_TEAPOT);
+    public ExchangeDTO getWhatATerribleFailure() {
+        return ExchangeDTO.empty();
     }
 
     @Override

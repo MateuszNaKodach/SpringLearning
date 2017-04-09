@@ -1,6 +1,6 @@
-package pl.nowakprojects.services.interfaces;
+package pl.nowakprojects.services;
 
-import pl.nowakprojects.models.Info;
+import pl.nowakprojects.model.Info;
 
 /**
  * Created by Mateusz on 08.04.2017.

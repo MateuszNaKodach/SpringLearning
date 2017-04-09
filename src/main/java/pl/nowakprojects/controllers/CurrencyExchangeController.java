@@ -2,12 +2,14 @@ package pl.nowakprojects.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import pl.nowakprojects.restclients.dto.ExchangeDTO;
-import pl.nowakprojects.services.interfaces.IExchangeService;
+import pl.nowakprojects.controllers.paramscontainers.ExchangeParams;
+import pl.nowakprojects.services.restclients.dto.ExchangeDTO;
+import pl.nowakprojects.services.IExchangeService;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -23,12 +25,12 @@ public class CurrencyExchangeController{
 
     @RequestMapping(value = "/latest", method = RequestMethod.GET)
     public ResponseEntity<ExchangeDTO> getLatestCurrencyRates(){
-        return exchangeService.getLatestExchange();
+        return new ResponseEntity<>(exchangeService.getLatestExchange(),HttpStatus.OK);
     }
 
     @RequestMapping(value = "/future", method = RequestMethod.GET)
     public ResponseEntity<ExchangeDTO> getFutureRates(){
-        return exchangeService.getWhatATerribleFailure();
+        return new ResponseEntity<>(exchangeService.getWhatATerribleFailure(), HttpStatus.I_AM_A_TEAPOT);
     }
 
     @RequestMapping(value = "/latestFor",method = RequestMethod.GET)
@@ -36,6 +38,11 @@ public class CurrencyExchangeController{
             @RequestParam(name="base") String baseSymbol,
             @RequestParam(name="symbols") List<String> toExchangeSymbols){
         return exchangeService.getLatestExchangeFor(baseSymbol,toExchangeSymbols);
+    }
+
+    @RequestMapping(value = "/latestFor",method = RequestMethod.POST)
+    public ExchangeDTO getLatestExchangeForParams(@Validated @RequestBody ExchangeParams exchangeParams){
+        return exchangeService.getLatestExchangeFor(exchangeParams.getBaseSymbol(),exchangeParams.getToExchangeSymbols());
     }
 
 

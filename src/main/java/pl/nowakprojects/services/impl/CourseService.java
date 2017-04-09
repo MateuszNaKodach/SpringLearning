@@ -1,10 +1,10 @@
-package pl.nowakprojects.services.implementation;
+package pl.nowakprojects.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.nowakprojects.models.Course;
+import pl.nowakprojects.model.Course;
 import pl.nowakprojects.repositories.CourseRepository;
-import pl.nowakprojects.services.interfaces.ICourseService;
+import pl.nowakprojects.services.ICourseService;
 
 import java.util.List;
 

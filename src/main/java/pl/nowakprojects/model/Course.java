@@ -1,4 +1,4 @@
-package pl.nowakprojects.models;
+package pl.nowakprojects.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

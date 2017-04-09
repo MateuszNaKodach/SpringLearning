@@ -1,10 +1,10 @@
-package pl.nowakprojects.services.implementation;
+package pl.nowakprojects.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.nowakprojects.models.Topic;
+import pl.nowakprojects.model.Topic;
 import pl.nowakprojects.repositories.TopicRepository;
-import pl.nowakprojects.services.interfaces.ITopicService;
+import pl.nowakprojects.services.ITopicService;
 
 import java.util.List;
 

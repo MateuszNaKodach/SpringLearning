@@ -1,4 +1,4 @@
-package pl.nowakprojects.models;
+package pl.nowakprojects.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +8,6 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class Info {
-    private String info;
+public class Greeting {
+    private String message;
 }

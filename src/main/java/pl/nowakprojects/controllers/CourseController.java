@@ -2,9 +2,9 @@ package pl.nowakprojects.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pl.nowakprojects.models.Course;
-import pl.nowakprojects.models.Topic;
-import pl.nowakprojects.services.interfaces.ICourseService;
+import pl.nowakprojects.model.Course;
+import pl.nowakprojects.model.Topic;
+import pl.nowakprojects.services.ICourseService;
 
 import java.util.List;
 

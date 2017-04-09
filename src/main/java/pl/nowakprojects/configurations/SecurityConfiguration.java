@@ -18,11 +18,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       // http.authorizeRequests().anyRequest().permitAll();
+         http.authorizeRequests().anyRequest().permitAll();
         http.authorizeRequests().antMatchers("/start").permitAll();
         http.authorizeRequests().antMatchers("/user").hasRole(ROLE_USER);
         http.authorizeRequests().antMatchers("/admin").hasRole(ROLE_ADMIN);
-      //  http.httpBasic();
+        http.csrf().disable(); //HTTPStatus Forbiiden witohut it, why?
+        //http.httpBasic();
     }
 
     @Override

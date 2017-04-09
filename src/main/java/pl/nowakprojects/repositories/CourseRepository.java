@@ -1,7 +1,7 @@
 package pl.nowakprojects.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import pl.nowakprojects.models.Course;
+import pl.nowakprojects.model.Course;
 
 import java.util.List;
 

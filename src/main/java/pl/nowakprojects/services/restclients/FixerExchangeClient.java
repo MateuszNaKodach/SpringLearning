@@ -1,12 +1,10 @@
-package pl.nowakprojects.restclients;
+package pl.nowakprojects.services.restclients;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import pl.nowakprojects.restclients.dto.ExchangeDTO;
+import pl.nowakprojects.services.restclients.dto.ExchangeDTO;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,8 +25,8 @@ public class FixerExchangeClient {
     private RestTemplate restTemplate;
 
 
-    public ResponseEntity<ExchangeDTO> getLatestRates(){
-        return restTemplate.getForEntity(getLatestUrl(), RESPONSE_MODEL_CLASS);
+    public ExchangeDTO getLatestRates(){
+        return restTemplate.getForObject(getLatestUrl(), RESPONSE_MODEL_CLASS);
     }
 
     public ExchangeDTO getLatestRatesWithBase(String baseSymbol, List<String> toExchangeSymbols){

@@ -2,8 +2,8 @@ package pl.nowakprojects.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pl.nowakprojects.models.Topic;
-import pl.nowakprojects.services.interfaces.ITopicService;
+import pl.nowakprojects.model.Topic;
+import pl.nowakprojects.services.ITopicService;
 
 import java.util.List;
 

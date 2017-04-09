@@ -1,6 +1,6 @@
-package pl.nowakprojects.services.interfaces;
+package pl.nowakprojects.services;
 
-import pl.nowakprojects.models.Course;
+import pl.nowakprojects.model.Course;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package pl.nowakprojects.restclients.dto;
+package pl.nowakprojects.services.restclients.dto;
 
 import com.google.gson.annotations.Expose;
 import lombok.AllArgsConstructor;

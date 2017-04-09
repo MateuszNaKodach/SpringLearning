@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pl.nowakprojects.controllers.paramscontainers.GreetingParams;
-import pl.nowakprojects.models.Greeting;
+import pl.nowakprojects.model.Greeting;
 
 /**
  * Created by Mateusz on 08.04.2017.
